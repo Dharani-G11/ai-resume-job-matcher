@@ -1,0 +1,27 @@
+[project]
+name = "ai-resume-job-matcher"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "anthropic>=1.11.0",
+    "chromadb>=1.5.9",
+    "fastapi>=0.141.1",
+    "ollama>=0.6.3",
+    "psycopg[binary]>=3.3.6",
+    "pymupdf>=1.28.2",
+    "python-dotenv>=1.2.3",
+    "python-multipart>=0.0.32",
+    "sentence-transformers>=6.1.0",
+    "sqlalchemy>=2.1.2",
+    "uvicorn>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
